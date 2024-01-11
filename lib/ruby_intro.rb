@@ -3,37 +3,24 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  # ผลรวมของ array
   arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
-  if !arr.any?
-    return 0
-  elsif arr.length == 1
-    return arr[0]
-  else
-    arr = arr.sort
-    arr[-1] + arr[-2]
-  end
+  # นำตัวใหญ่ 2 ตัวมาบวกกัน
+  arr.max(2).sum 
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
-  isEqual = false
   if !arr.any? || arr.length == 1
-    return isEqual
+    return false
   else
-    for i in 0..(arr.length()-2) do
-      if arr[i] + arr[i+1] == n
-        isEqual = true
-        break
-      end
-    end
+    # นำค่าใน array ทีละ2ตัวมาบวกกัน
+    arr.combination(2).any? {|x,y| x+y == n}
   end
   
-  return isEqual
 
 end
 
