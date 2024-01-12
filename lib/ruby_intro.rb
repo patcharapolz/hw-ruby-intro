@@ -16,10 +16,10 @@ def sum_to_n? arr, n
   # YOUR CODE HERE
   if !arr.any? || arr.length == 1
     return false
-  else
+  end
+  
     # นำค่าใน array ทีละ2ตัวมาบวกกัน
     arr.combination(2).any? {|x,y| x+y == n}
-  end
 end
 
 # Part 2
@@ -34,20 +34,18 @@ def starts_with_consonant? s
   consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y" , "z"]
   if s.length < 1
     return false
-  elsif consonant.include? s[0].downcase
-    return true
   end
+  
+  consonant.include? s[0].downcase
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
   if (s.delete('01') != '') || s.empty?
     return false
-  elsif s.to_i(2) % 4 == 0
-    return true
-  else
-    return false
   end
+  
+  s.to_i(2) % 4 == 0
 end
 
 # Part 3
