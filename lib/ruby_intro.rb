@@ -33,7 +33,6 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-  isCon = false
   consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y" , "z"]
   if s.length < 1
     return false
