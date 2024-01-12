@@ -20,8 +20,6 @@ def sum_to_n? arr, n
     # นำค่าใน array ทีละ2ตัวมาบวกกัน
     arr.combination(2).any? {|x,y| x+y == n}
   end
-  
-
 end
 
 # Part 2
@@ -60,7 +58,6 @@ class BookInStock
     @isbn = isbn
     @price = price.to_f
     raise ArgumentError if isbn.empty? || price < 1
-
   end
 
   def isbn
@@ -69,7 +66,6 @@ class BookInStock
 
   def isbn=(new_isbn)
     @isbn = new_isbn
-
   end
 
   def price
