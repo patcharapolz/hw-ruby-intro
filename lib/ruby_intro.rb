@@ -28,7 +28,7 @@ end
 
 def hello(name)
   # YOUR CODE HERE
-  return "Hello, #{name}"
+  "Hello, #{name}"
 end
 
 def starts_with_consonant? s
